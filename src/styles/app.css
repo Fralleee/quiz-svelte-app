@@ -19,6 +19,16 @@
 	--column-margin-top: 4rem;
 }
 
+html {
+	box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+	caret-color: transparent;
+}
+
 body {
 	min-height: 100vh;
 	margin: 0;

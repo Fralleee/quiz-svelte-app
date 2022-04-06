@@ -1,60 +1,36 @@
 <script context="module" lang="ts">
+	import Button from '$lib/Button.svelte';
+
 	export const prerender = true;
 </script>
 
-<script lang="ts">
-	import Counter from '$lib/Counter.svelte';
-</script>
-
 <svelte:head>
-	<title>Home</title>
+	<title>Menu</title>
 </svelte:head>
 
 <section>
-	<h1 class="text-3xl font-bold underline">Hello world!</h1>
-	<h1>
-		<div class="welcome">
-			<picture>
-				<source srcset="svelte-welcome.webp" type="image/webp" />
-				<img src="svelte-welcome.png" alt="Welcome" />
-			</picture>
-		</div>
-
-		to your new<br />SvelteKit app
-	</h1>
-
-	<h2>
-		try editing <strong>src/routes/index.svelte</strong>
-	</h2>
-
-	<Counter />
+	<h1 class="text-4xl font-bold underline">Menu</h1>
+	<div class="menu">
+		<Button href="/game">Play</Button>
+		<Button href="/scoreboard">Scoreboard</Button>
+		<Button title="Med title">Knapp med titel</Button>
+		<Button title="Med title" />
+	</div>
 </section>
 
 <style>
 	section {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		flex: 1;
+		padding: 80px 0;
 	}
 
 	h1 {
-		width: 100%;
+		margin-bottom: 40px;
 	}
 
-	.welcome {
-		position: relative;
-		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
-	}
-
-	.welcome img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
+	.menu {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin: 0 auto;
 	}
 </style>
